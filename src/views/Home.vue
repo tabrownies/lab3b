@@ -2,7 +2,7 @@
   <div>
     <div class="wrapper">
       <div class="search">
-        <form class="pure-form">
+        <form class="pure-form" @submit.prevent>
           <i class="fas fa-search"></i><input v-model="searchText" />
         </form>
       </div>
