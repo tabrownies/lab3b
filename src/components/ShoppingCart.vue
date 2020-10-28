@@ -1,7 +1,10 @@
 <template>
     <ul v-if="items.length > 0">
         <li class="cart-item" v-for="(item, index) in items" :key="item.id">
-            <img :src="'/images/products/'+item.image">
+            <div>
+                <img :src="'/images/products/'+item.image">
+            </div>
+            
             <h2>
                 {{item.name}}
             </h2>
@@ -47,25 +50,36 @@
     }
 
 
-    .cart-item img,
+    .cart-item div,
     .cart-item h2,
-    .cart-item p {
+    .cart-item p,
+    .cart-item button{
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0px 15px;
+        margin: 15px;
     }
 
-    .cart-item img {
+    .cart-item div {
         height: 200px;
-        padding-top: 15px;
+        
+        margin-top: 15px;
+        
+        
     }
-
+    .cart-item div img{
+        border: 2px solid #333;
+        border-radius: 5px;
+    }
     .cart-item h2 {
         font-size: 40px;
     }
 
     .cart-item p {
         font-size: 35px;
+    }
+    .cart-item{
+        font-size: 32px;
+        padding:4px;
     }
 </style>
