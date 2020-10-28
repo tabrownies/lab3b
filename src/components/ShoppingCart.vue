@@ -1,5 +1,5 @@
 <template>
-    <ul>
+    <ul v-if="items.length > 0">
         <li class="cart-item" v-for="(item, index) in items" :key="item.id">
             <img :src="'/images/products/'+item.image">
             <h2>
@@ -11,6 +11,9 @@
             <button class="auto" @click="removeFromCart(index)">Remove</button>
         </li>
     </ul>
+    <h3 v-else>
+        There are no items in your cart
+    </h3>
 
 </template>
 
