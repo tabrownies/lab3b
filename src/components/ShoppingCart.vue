@@ -61,13 +61,13 @@
     }
 
     .cart-item div {
-        height: 200px;
         
         margin-top: 15px;
         
         
     }
     .cart-item div img{
+        height:200px;
         border: 2px solid #333;
         border-radius: 5px;
     }
